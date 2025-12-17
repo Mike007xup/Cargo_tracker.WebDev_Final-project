@@ -1,0 +1,51 @@
+{
+  "id": "users",
+  "name": "users",
+  "type": "auth",
+  "system": false,
+  "schema": [
+    {
+      "id": "name",
+      "name": "name",
+      "type": "text",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "role",
+      "name": "role",
+      "type": "select",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "maxSelect": 1,
+        "values": ["admin", "staff", "client"]
+      }
+    }
+  ],
+  "indexes": [],
+  "listRule": null,
+  "viewRule": null,
+  "createRule": null,
+  "updateRule": null,
+  "deleteRule": null,
+  "options": {
+    "allowEmailAuth": true,
+    "allowOAuth2Auth": false,
+    "allowUsernameAuth": false,
+    "exceptEmailDomains": null,
+    "manageRule": null,
+    "minPasswordLength": 8,
+    "onlyEmailDomains": null,
+    "onlyVerified": false,
+    "requireEmail": true
+  }
+}
+

@@ -1,0 +1,87 @@
+{
+  "id": "cargo_status_logs",
+  "name": "cargo_status_logs",
+  "type": "base",
+  "system": false,
+  "schema": [
+    {
+      "id": "cargo",
+      "name": "cargo",
+      "type": "relation",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "collectionId": "cargos",
+        "cascadeDelete": true,
+        "minSelect": null,
+        "maxSelect": 1,
+        "displayFields": ["tracking_code"]
+      }
+    },
+    {
+      "id": "status",
+      "name": "status",
+      "type": "select",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "maxSelect": 1,
+        "values": ["Pending", "In Transit", "Arrived", "Delivered", "Delayed"]
+      }
+    },
+    {
+      "id": "location",
+      "name": "location",
+      "type": "text",
+      "required": false,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "note",
+      "name": "note",
+      "type": "text",
+      "required": false,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "updated_by",
+      "name": "updated_by",
+      "type": "relation",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "collectionId": "users",
+        "cascadeDelete": false,
+        "minSelect": null,
+        "maxSelect": 1,
+        "displayFields": ["name", "email"]
+      }
+    }
+  ],
+  "indexes": [
+    "CREATE INDEX `idx_cargo_status_logs_cargo` ON `cargo_status_logs` (`cargo`)",
+    "CREATE INDEX `idx_cargo_status_logs_updated_at` ON `cargo_status_logs` (`updated`)"
+  ],
+  "listRule": "",
+  "viewRule": "",
+  "createRule": "@request.auth.id != '' && (@request.auth.role = 'admin' || @request.auth.role = 'staff')",
+  "updateRule": "@request.auth.id != '' && (@request.auth.role = 'admin' || @request.auth.role = 'staff')",
+  "deleteRule": "@request.auth.id != '' && (@request.auth.role = 'admin' || @request.auth.role = 'staff')",
+  "options": {}
+}
+

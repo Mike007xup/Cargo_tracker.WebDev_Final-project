@@ -1,0 +1,148 @@
+{
+  "id": "cargos",
+  "name": "cargos",
+  "type": "base",
+  "system": false,
+  "schema": [
+    {
+      "id": "tracking_code",
+      "name": "tracking_code",
+      "type": "text",
+      "required": true,
+      "presentable": true,
+      "unique": true,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "sender_name",
+      "name": "sender_name",
+      "type": "text",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "sender_phone",
+      "name": "sender_phone",
+      "type": "text",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "receiver_name",
+      "name": "receiver_name",
+      "type": "text",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "receiver_phone",
+      "name": "receiver_phone",
+      "type": "text",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "origin",
+      "name": "origin",
+      "type": "text",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "destination",
+      "name": "destination",
+      "type": "text",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": null,
+        "max": null,
+        "pattern": ""
+      }
+    },
+    {
+      "id": "current_status",
+      "name": "current_status",
+      "type": "select",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "maxSelect": 1,
+        "values": ["Pending", "In Transit", "Arrived", "Delivered", "Delayed"]
+      }
+    },
+    {
+      "id": "estimated_delivery_date",
+      "name": "estimated_delivery_date",
+      "type": "date",
+      "required": false,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "min": "",
+        "max": ""
+      }
+    },
+    {
+      "id": "created_by",
+      "name": "created_by",
+      "type": "relation",
+      "required": true,
+      "presentable": false,
+      "unique": false,
+      "options": {
+        "collectionId": "users",
+        "cascadeDelete": false,
+        "minSelect": null,
+        "maxSelect": 1,
+        "displayFields": ["name", "email"]
+      }
+    }
+  ],
+  "indexes": [
+    "CREATE INDEX `idx_cargos_tracking_code` ON `cargos` (`tracking_code`)"
+  ],
+  "listRule": "",
+  "viewRule": "",
+  "createRule": "@request.auth.id != '' && (@request.auth.role = 'admin' || @request.auth.role = 'staff')",
+  "updateRule": "@request.auth.id != '' && (@request.auth.role = 'admin' || @request.auth.role = 'staff')",
+  "deleteRule": "@request.auth.id != '' && (@request.auth.role = 'admin' || @request.auth.role = 'staff')",
+  "options": {}
+}
+

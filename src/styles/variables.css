@@ -1,0 +1,25 @@
+:root {
+    --color-primary: #0B3C5D;
+    --color-secondary: #1F7A5F;
+    --color-accent: #F4B41A;
+
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #E5E9F0;
+    --color-text-dark: #1A1A1A;
+
+    --color-bg-main: #F7F9FC;
+    --color-bg-card: #FFFFFF;
+
+    --status-pending: #9CA3AF;
+    --status-in-transit: #0B3C5D;
+    --status-arrived: #1F7A5F;
+    --status-delivered: #145A46;
+    --status-delayed: #C1121F;
+
+    --border-soft: rgba(11, 60, 93, 0.15);
+    --shadow-soft: 0 8px 24px rgba(11, 60, 93, 0.08);
+
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --transition: all 0.3s ease;
+}

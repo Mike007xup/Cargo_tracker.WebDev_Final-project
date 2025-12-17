@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+   Note: @tailwind and @apply are Tailwind CSS directives. 
+   Warnings in VS Code can be safely ignored or resolved by installing the Tailwind CSS IntelliSense extension. 
+*/
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-dark);
+}
+
+.navbar {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar {
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+}
+
+.card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: #000000;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    opacity: 0.9;
+}
+
+.status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.status.pending {
+    background-color: var(--status-pending);
+}
+
+.status.in-transit {
+    background-color: var(--status-in-transit);
+}
+
+.status.arrived {
+    background-color: var(--status-arrived);
+}
+
+.status.delivered {
+    background-color: var(--status-delivered);
+}
+
+.status.delayed {
+    background-color: var(--status-delayed);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-soft);
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(11, 60, 93, 0.1);
+}
+
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-secondary);
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.glass-panel {
+    @apply glass;
+}
+
+.premium-card {
+    @apply card;
+}
+
+.status-badge {
+    @apply status;
+}
