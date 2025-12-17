@@ -55,12 +55,35 @@ The application utilizes a professional-grade color palette and design language:
 - **Maps**: React-Leaflet
 - **Backend**: PocketBase SDK
 
-## Project Structure
+## Project File Intel
 
-- `/src/pages`: Feature-specific views (Home, tracking, Dashboards).
-- `/src/components`: Reusable UI elements (Navbar, Timeline, Map).
-- `/src/styles`: Theme variables and global component styles.
-- `/public/images`: Localized, high-resolution maritime assets.
+### 📄 Pages [React.Page]
+- **HomePage.tsx** (`React.Page`): Main Port Hub & Interactive Tracking.
+- **LoginPage.tsx** (`React.Page`): Secure Security Access Portal.
+- **RegisterPage.tsx** (`React.Page`): Official Operator Registry.
+- **DashboardPage.tsx** (`React.Page`): Client Consignment Center.
+- **AdminDashboardPage.tsx** (`React.Page`): Port Control Command Center.
+- **CargoDetailsPage.tsx** (`React.Page`): Comprehensive Intel Hub.
+- **ProfilePage.tsx** (`React.Page`): User Identity & Preferences.
+- **AdminVesselsPage.tsx** (`React.Page`): Authorized Fleet Registry.
+- **PublicTrackingPage.tsx** (`React.Page`): Live Cargo Status Results.
+
+### 🏗️ Components [React.Component]
+- **Navbar.tsx** (`React.Component`): Global Navigation System.
+- **StatusTimeline.tsx** (`React.Component`): Vertical Shipment Status History.
+- **TrackingMap.tsx** (`React.Component`): Satellite Map Visualization.
+- **AdminRoute.tsx** (`React.Auth`): Administrative Control Gateway.
+- **ProtectedRoute.tsx** (`React.Auth`): Secure Access Shield.
+
+### 🎨 Styles [CSS.Theme]
+- **variables.css** (`CSS.Variables`): Senegal Port Theme Design Tokens.
+- **global.css** (`CSS.Global`): Premium Component Framework & Utilities.
+
+### ⚙️ Services & Types [TS.Logic]
+- **pb.ts** (`TS.Backend`): PocketBase Connection Protocol.
+- **shipmentService.ts** (`TS.Service`): Shipment Intel Data Fetching.
+- **users.ts** (`TS.Service`): User Identity Data Logic.
+- **pocketbase.ts** (`TS.Types`): Type-Safe Schema Definitions.
 
 ---
 *Created for the Port Autonome de Dakar Logistics Digitalization Initiative.*
