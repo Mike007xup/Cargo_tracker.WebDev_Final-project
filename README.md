@@ -57,7 +57,7 @@ The application utilizes a professional-grade color palette and design language:
 
 ## Project File Intel
 
-### 📄 Pages [React.Page]
+### Pages [React.Page]
 - **HomePage.tsx** (`React.Page`): Main Hub & Interactive Tracking.
 - **LoginPage.tsx** (`React.Page`): Secure Security Access Portal.
 - **RegisterPage.tsx** (`React.Page`): Official Operator Registry.
@@ -68,18 +68,18 @@ The application utilizes a professional-grade color palette and design language:
 - **AdminVesselsPage.tsx** (`React.Page`): Authorized Fleet Registry.
 - **PublicTrackingPage.tsx** (`React.Page`): Live Cargo Status Results.
 
-### 🏗️ Components [React.Component]
+### Components [React.Component]
 - **Navbar.tsx** (`React.Component`): Global Navigation System.
 - **StatusTimeline.tsx** (`React.Component`): Vertical Shipment Status History.
 - **TrackingMap.tsx** (`React.Component`): Satellite Map Visualization.
 - **AdminRoute.tsx** (`React.Auth`): Administrative Control Gateway.
 - **ProtectedRoute.tsx** (`React.Auth`): Secure Access Shield.
 
-### 🎨 Styles [CSS.Theme]
+### Styles [CSS.Theme]
 - **variables.css** (`CSS.Variables`): Design Tokens.
 - **global.css** (`CSS.Global`): Premium Component Framework & Utilities.
 
-### ⚙️ Services & Types [TS.Logic]
+### Services & Types [TS.Logic]
 - **pb.ts** (`TS.Backend`): PocketBase Connection Protocol.
 - **shipmentService.ts** (`TS.Service`): Shipment Data Fetching.
 - **users.ts** (`TS.Service`): User Identity Data Logic.
