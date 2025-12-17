@@ -7,7 +7,7 @@ const AdminVesselsPage = () => {
     const [showAddModal, setShowAddModal] = useState(false);
 
     const vessels = [
-        { id: '1', name: 'MV SUNUGAL STAR', imo: 'IMO 9123456', status: 'Active', flag: 'Senegal', type: 'Container' },
+        { id: '1', name: 'MV GLOBAL STAR', imo: 'IMO 9123456', status: 'Active', flag: 'Senegal', type: 'Container' },
         { id: '2', name: 'MV DAKAR FALCON', imo: 'IMO 9654321', status: 'At Port', flag: 'Panama', type: 'Bulk Carrier' },
         { id: '3', name: 'MV ATLANTIC PRIDE', imo: 'IMO 8765432', status: 'Active', flag: 'Liberia', type: 'Oil Tanker' },
     ];
@@ -88,7 +88,7 @@ const AdminVesselsPage = () => {
                             <button onClick={() => setShowAddModal(false)} className="text-gray-400 hover:text-gray-600 text-3xl">&times;</button>
                         </div>
                         <div className="space-y-5">
-                            <InputBlock label="VESSEL NAME" placeholder="e.g. MV SUNUGAL EXPRESS" />
+                            <InputBlock label="VESSEL NAME" placeholder="e.g. MV GLOBAL EXPRESS" />
                             <InputBlock label="IMO REGISTRY NUMBER" placeholder="IMO-1234567" />
                             <div>
                                 <label className="block text-[10px] font-black text-gray-400 mb-1 tracking-widest">VESSEL CATEGORY</label>

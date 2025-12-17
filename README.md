@@ -1,6 +1,6 @@
-# Cargo Tracker: Senegal Port Authority Edition
+# Cargo Tracker: Professional Logistics Management
 
-A premium, high-performance logistics tracking application tailored for the **Port Autonome de Dakar (PAD)**. This application provides real-time "Intel" management for maritime shipments, vessels, and port operations using the exclusive **Senegal Port Theme**.
+A premium, high-performance logistics tracking application. This application provides real-time management for maritime shipments, vessels, and port operations using a modern, professional interface.
 
 ## Key Features
 
@@ -10,12 +10,12 @@ A premium, high-performance logistics tracking application tailored for the **Po
 - **Fleet Management**: Comprehensive registry for authorized port vessels.
 - **Responsive Intel**: Optimized for both high-end desktop monitors and mobile field operations.
 
-## Design System: Senegal Port Theme
+## Design System
 
 The application utilizes a professional-grade color palette and design language:
 - **Primary**: Deep Navy (#0B3C5D) - Represents stability and authority.
-- **Secondary**: Emerald Green (#1D7044) - Represents successful delivery and growth.
-- **Accent**: Port Gold (#D4AF37) - Used for critical status alerts and navigation highlights.
+- **Secondary**: Emerald Green (#1D7044) - Represents success and growth.
+- **Accent**: Gold (#D4AF37) - Used for critical status alerts and navigation highlights.
 - **Typography**: Modern, bold sans-serif (Inter/Outfit) for maximum readability.
 
 ## Getting Started
@@ -50,7 +50,7 @@ The application utilizes a professional-grade color palette and design language:
 ## Tech Stack
 
 - **Frontend**: React 18, Vite, TypeScript
-- **Styling**: Tailwind CSS (Optimized via custom `global.css` system)
+- **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 - **Maps**: React-Leaflet
 - **Backend**: PocketBase SDK
@@ -58,12 +58,12 @@ The application utilizes a professional-grade color palette and design language:
 ## Project File Intel
 
 ### 📄 Pages [React.Page]
-- **HomePage.tsx** (`React.Page`): Main Port Hub & Interactive Tracking.
+- **HomePage.tsx** (`React.Page`): Main Hub & Interactive Tracking.
 - **LoginPage.tsx** (`React.Page`): Secure Security Access Portal.
 - **RegisterPage.tsx** (`React.Page`): Official Operator Registry.
 - **DashboardPage.tsx** (`React.Page`): Client Consignment Center.
 - **AdminDashboardPage.tsx** (`React.Page`): Port Control Command Center.
-- **CargoDetailsPage.tsx** (`React.Page`): Comprehensive Intel Hub.
+- **CargoDetailsPage.tsx** (`React.Page`): Comprehensive Management Hub.
 - **ProfilePage.tsx** (`React.Page`): User Identity & Preferences.
 - **AdminVesselsPage.tsx** (`React.Page`): Authorized Fleet Registry.
 - **PublicTrackingPage.tsx** (`React.Page`): Live Cargo Status Results.
@@ -76,14 +76,14 @@ The application utilizes a professional-grade color palette and design language:
 - **ProtectedRoute.tsx** (`React.Auth`): Secure Access Shield.
 
 ### 🎨 Styles [CSS.Theme]
-- **variables.css** (`CSS.Variables`): Senegal Port Theme Design Tokens.
+- **variables.css** (`CSS.Variables`): Design Tokens.
 - **global.css** (`CSS.Global`): Premium Component Framework & Utilities.
 
 ### ⚙️ Services & Types [TS.Logic]
 - **pb.ts** (`TS.Backend`): PocketBase Connection Protocol.
-- **shipmentService.ts** (`TS.Service`): Shipment Intel Data Fetching.
+- **shipmentService.ts** (`TS.Service`): Shipment Data Fetching.
 - **users.ts** (`TS.Service`): User Identity Data Logic.
 - **pocketbase.ts** (`TS.Types`): Type-Safe Schema Definitions.
 
 ---
-*Created for the Port Autonome de Dakar Logistics Digitalization Initiative.*
+*Professional Logistics Digitalization Initiative.*

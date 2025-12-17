@@ -54,7 +54,7 @@ const LoginPage = () => {
                     <Link to="/" className="inline-flex items-center gap-3 mb-2">
                         <Anchor className="text-color-accent" size={32} style={{ color: 'var(--color-accent)' }} />
                         <span className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>
-                            SUNUGAL LOGISTICS
+                            CARGO TRACKER
                         </span>
                     </Link>
                     <p className="text-gray-500">Secure Admin & Staff Portal</p>
@@ -88,7 +88,7 @@ const LoginPage = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className={errors.email ? 'border-red-500' : ''}
-                                placeholder="name@sunugal.sn"
+                                placeholder="name@company.sn"
                                 disabled={loading}
                             />
                             {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -148,7 +148,7 @@ const LoginPage = () => {
                 </div>
 
                 <p className="mt-8 text-center text-xs text-gray-400">
-                    Proprietary system for authorized Sunugal Logistics personnel only.
+                    Proprietary system for authorized personnel only.
                     Unauthorized access is strictly prohibited.
                 </p>
             </div>

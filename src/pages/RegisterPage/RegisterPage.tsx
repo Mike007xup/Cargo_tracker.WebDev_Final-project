@@ -75,7 +75,7 @@ const RegisterPage = () => {
                         <Link to="/" className="inline-flex items-center gap-3 mb-2">
                             <Anchor className="text-color-accent" size={32} style={{ color: 'var(--color-accent)' }} />
                             <span className="text-2xl font-bold" style={{ color: 'var(--color-primary)' }}>
-                                SUNUGAL LOGISTICS
+                                CARGO TRACKER
                             </span>
                         </Link>
                         <p className="text-gray-500">Global Logistics Portfolio</p>

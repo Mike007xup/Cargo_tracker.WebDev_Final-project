@@ -24,7 +24,7 @@ export const Navbar = () => {
                 <Link to="/" className="flex items-center gap-2 text-white no-underline">
                     <Anchor className="text-color-accent" size={24} style={{ color: 'var(--color-accent)' }} />
                     <span className="font-bold text-xl tracking-tight">
-                        SUNUGAL <span style={{ color: 'var(--color-accent)' }}>LOGISTICS</span>
+                        CARGO <span style={{ color: 'var(--color-accent)' }}>TRACKER</span>
                     </span>
                 </Link>
 

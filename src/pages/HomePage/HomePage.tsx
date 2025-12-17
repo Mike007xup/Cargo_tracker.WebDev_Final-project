@@ -80,8 +80,8 @@ const HomePage = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-gray-200"
                         >
-                            Real-time cargo tracking at the Port Autonome de Dakar.
-                            Connecting the world to Senegal.
+                            Real-time cargo tracking and logistics management.
+                            Connecting your business to the world.
                         </motion.p>
 
                         <motion.form
@@ -205,7 +205,7 @@ const HomePage = () => {
 
                 <footer className="bg-gray-900 text-gray-400 py-12 text-center">
                     <div className="container">
-                        <p>&copy; 2024 Sunugal Logistics - Port Autonome de Dakar. All rights reserved.</p>
+                        <p>&copy; 2024 Cargo Tracker. All rights reserved.</p>
                     </div>
                 </footer>
             </div>
