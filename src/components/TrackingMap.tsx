@@ -3,8 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { Location } from '../services/shipmentService';
-
-// Custom icon for current location
 const customIcon = new L.Icon({
     iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
     iconSize: [32, 41],
@@ -14,7 +12,6 @@ const customIcon = new L.Icon({
     shadowSize: [41, 41]
 });
 
-// Custom icon for destination (Dakar Port)
 const destinationIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
     iconSize: [32, 41],
@@ -67,7 +64,6 @@ export const TrackingMap: React.FC<TrackingMapProps> = ({ currentLocation, vesse
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
-                {/* Origin Marker */}
                 {originPos[0] !== 0 && (
                     <Marker position={originPos} icon={customIcon}>
                         <Popup>
@@ -83,7 +79,6 @@ export const TrackingMap: React.FC<TrackingMapProps> = ({ currentLocation, vesse
                     </Marker>
                 )}
 
-                {/* Current Location Marker */}
                 {currentPos[0] !== 0 && currentPos[0] !== DAKAR_COORDS[0] && (
                     <>
                         <Marker position={currentPos} icon={customIcon}>
@@ -102,7 +97,6 @@ export const TrackingMap: React.FC<TrackingMapProps> = ({ currentLocation, vesse
                             </Popup>
                         </Marker>
 
-                        {/* Polyline from Origin to Current Location */}
                         <Polyline
                             positions={[originPos, currentPos]}
                             color="var(--color-accent)"
@@ -113,7 +107,6 @@ export const TrackingMap: React.FC<TrackingMapProps> = ({ currentLocation, vesse
                     </>
                 )}
 
-                {/* Route to Destination (Dakar) */}
                 {currentPos[0] !== 0 && (
                     <Polyline
                         positions={[currentPos, DAKAR_COORDS]}
@@ -124,7 +117,6 @@ export const TrackingMap: React.FC<TrackingMapProps> = ({ currentLocation, vesse
                     />
                 )}
 
-                {/* Full route from origin to destination */}
                 {originPos[0] !== 0 && (
                     <Polyline
                         positions={[originPos, DAKAR_COORDS]}
@@ -134,7 +126,6 @@ export const TrackingMap: React.FC<TrackingMapProps> = ({ currentLocation, vesse
                     />
                 )}
 
-                {/* Destination Marker (Dakar Port) */}
                 <Marker position={DAKAR_COORDS} icon={destinationIcon}>
                     <Popup>
                         <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}>
