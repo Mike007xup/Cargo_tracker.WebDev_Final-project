@@ -21,12 +21,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Check if user is already authenticated
         const currentUser = getCurrentUser();
         setUser(currentUser);
         setLoading(false);
 
-        // Listen for auth changes
         pb.authStore.onChange((token: string, model: any) => {
             setUser(model as User | null);
         });
@@ -39,7 +37,6 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     const register = async (email: string, password: string, name: string) => {
         const newUser = await registerUser(email, password, name, 'client');
-        // Auto-login after registration
         await login(email, password);
     };
 

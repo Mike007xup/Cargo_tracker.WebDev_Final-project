@@ -38,7 +38,6 @@ export interface Shipment {
     receiverName?: string;
 }
 
-// Robust Mock Database simulating Port of Dakar
 const MOCK_DATABASE: Shipment[] = [
     {
         code: "SHP-DKR-001",
@@ -191,7 +190,7 @@ export const getShipmentByCode = async (code: string): Promise<Shipment> => {
         setTimeout(() => {
             const shipment = MOCK_DATABASE.find(
                 s => s.code.toLowerCase() === code.toLowerCase() ||
-                     s.specs.containerNumber.toLowerCase() === code.toLowerCase()
+                    s.specs.containerNumber.toLowerCase() === code.toLowerCase()
             );
             if (shipment) {
                 resolve(shipment);
